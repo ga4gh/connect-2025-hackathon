@@ -203,7 +203,7 @@ class ReportCase(object):
 
         return {
             "test_name": self.name,
-            "test_description": "Test to check if info-endpoint returns 200 OK with appropriate headers",
+            "test_description": "",
             "start_time": self.start_time,
             "end_time": self.end_time,
             "status": self.get_status(),
@@ -212,7 +212,7 @@ class ReportCase(object):
             "cases": [
                 {
                     "case_name": self.name,
-                    "case_description": "Test to check if info-endpoint returns 200 OK with appropriate headers",
+                    "case_description": "",
                     "log_messages": [],
                     "start_time": self.start_time,
                     "end_time": self.end_time,
