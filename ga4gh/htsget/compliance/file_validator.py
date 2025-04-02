@@ -29,7 +29,8 @@ class FileValidator(object):
         #     return "unknown"
 
         if "local_fs" in source:
-            file_type = os.popen("htsfile " + fp)
+            #file_type = os.popen("htsfile " + fp)
+            pass
 
         # Samtools' hstfile does not (yet) support (detailed?) htsget file identification ¯\_(ツ)_/¯
         #
