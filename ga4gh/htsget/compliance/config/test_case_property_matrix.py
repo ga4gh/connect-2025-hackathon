@@ -152,3 +152,25 @@ def construct_variants_test_cases_matrix():
                     variants_cases.append(props)
     
     return variants_cases
+
+def construct_service_test_cases_matrix():
+
+    service_cases = [
+                        {
+                            'name': 'reads: service-info', 
+                            'url_function': methods.FORMAT_SERVICE_URL, 
+                            'url_params': {}, 
+                            'obj_id': 'reads/service-info', 
+                            'expected_response_status': 200, 
+                            'expected_contents': ''
+                        },
+                        {
+                            'name': 'variants: service-info', 
+                            'url_function': methods.FORMAT_SERVICE_URL, 
+                            'url_params': {}, 
+                            'obj_id': 'variants/service-info', 
+                            'expected_response_status': 200, 
+                            'expected_contents': ''
+                        }
+                     ]
+    return service_cases

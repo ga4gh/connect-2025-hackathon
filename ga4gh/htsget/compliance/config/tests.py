@@ -19,5 +19,8 @@ TEST_GROUPS = {
     },
     "variants": {
         "cases": tcpm.construct_variants_test_cases_matrix()
+    },
+    "service-info": {
+        "cases": tcpm.construct_service_test_cases_matrix()
     }
 }

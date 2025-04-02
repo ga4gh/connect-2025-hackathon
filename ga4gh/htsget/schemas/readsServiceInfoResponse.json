@@ -1,0 +1,27 @@
+{
+   "updatedAt": "2025-04-02T04:20:24.972626676+00:00",
+   "name": "htsget-lambda",
+   "documentationUrl": "https://github.com/umccr/htsget-rs",
+   "id": "htsget-lambda/0.6.0",
+   "version": "0.6.0",
+   "organization": {
+     "name": "",
+     "url": ""
+   },
+   "description": "A cloud-based instance of htsget-rs using AWS Lambda, which serves data according to the htsget protocol.",
+   "createdAt": "2025-04-02T04:20:24.972624264+00:00",
+   "type": {
+     "group": "org.ga4gh",
+     "artifact": "htsget",
+     "version": "1.3.0"
+   },
+   "htsget": {
+     "datatype": "reads",
+     "formats": [
+       "BAM",
+       "CRAM"
+     ],
+     "fieldsParametersEffective": false,
+     "tagsParametersEffective": false
+   }
+ }

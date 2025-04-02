@@ -58,7 +58,6 @@ def main(**kwargs):
     # test cases in the associated test group, and add each ReportCase to the 
     # ReportGroup. Finally, summarize ReportGroup and add it to the Report
 
-    reads_test_cases = construct_reads_test_cases_matrix()
 
     for endpoint in c.ENDPOINTS:
         group = ReportGroup()
@@ -89,7 +88,7 @@ def main(**kwargs):
         header = {"GA4GH-TestbedReportSeriesId": kwargs["submit_id"], "GA4GH-TestbedReportSeriesToken": kwargs["submit_token"]}
         response = requests.post(kwargs["testbed_url"], headers=header, json=json.loads(str(report)))
         if response.status_code == 200:
-            print("The submission was successful, the report ID is " + "")
+            print("The submission was successful, the report ID is " + response.json()["id"])
         else:
             print("The submission failed with a status code of " + str(response.status_code))
             print("Error Message: " + str(response.content))

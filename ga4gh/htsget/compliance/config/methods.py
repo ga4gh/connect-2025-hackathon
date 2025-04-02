@@ -23,5 +23,15 @@ def format_reads_url(test_case, kwargs):
 def format_variants_url(test_case, kwargs):
     return format_url(test_case, kwargs, use_reads=False)
 
+def format_service_url(test_case, kwargs):
+    template = c.BASE_URL + c.ID_URLPATH
+    url = template.format(**{
+        "base_url": kwargs["htsget_url"],
+        "obj_id": test_case["obj_id"]
+    })
+    return url
+
+
 FORMAT_READS_URL = format_reads_url
 FORMAT_VARIANTS_URL = format_variants_url
+FORMAT_SERVICE_URL = format_service_url

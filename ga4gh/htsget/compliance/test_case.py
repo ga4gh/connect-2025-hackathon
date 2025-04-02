@@ -48,16 +48,18 @@ class TestCase(object):
         
         report_case = ReportCase()
         report_case.set_name(self.get_name())
-        report_case.set_start_time(str(datetime.datetime.utcnow().strftime(c.TIMESTAMP_FORMAT)))
+        report_case.set_start_time(str(datetime.datetime.utcnow().strftime(c.TIMESTAMP_FORMAT)))  
         try:
+            print("Running test " + self.get_name())
             url = self.get_formatted_url()
             params = self.get_url_params()
             report_case.add_debug_msg("URL: " + url)
             report_case.add_debug_msg("PARAMS: " + str(params))
             response = requests.get(url, params=params)
-            self.validate_response_code(response)
-            self.validate_response_schema(response)
-            self.validate_file_contents(response)
+            self.validate_response_code(response)         
+            if "service-info" not in self.get_name():
+                self.validate_response_schema(response)
+                self.validate_file_contents(response)
             report_case.set_status_success()
 
         except Exception as e:

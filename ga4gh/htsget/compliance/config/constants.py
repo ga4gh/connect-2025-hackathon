@@ -30,13 +30,14 @@ SCHEMA_HTSGET_URL = "htsgetUrl.json"
 SCHEMA_HTSGET_RESPONSE = "htsgetResponse.json"
 
 # ENDPOINTS
-ENDPOINTS = ["reads", "variants"]
+ENDPOINTS = ["reads", "variants", "service-info"]
 
 # URL TEMPLATES
 BASE_URL = "{base_url}"
 DEFAULT_READS_URLPATH = "/reads"
 DEFAULT_VARIANTS_URLPATH = "/variants"
 ID_URLPATH = "/{obj_id}"
+SERVICE_INFO_URLPATH = "/service-info"
 
 # OBJECT IDs FOR TEST CASES
 READS_ID_FOUND_1 = "htsnexus_test_NA12878"
