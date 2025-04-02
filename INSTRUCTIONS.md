@@ -1,18 +1,24 @@
 # Test Cases for the 2025 Htsget Compliance Hackathon
 
 We recommend to install a virtual environment to run the htsget compliance suite
-```python -m venv /path/to/new/virtual/environment```
-```source /path/to/new/virtual/environment/bin/activate```
+```
+python -m venv /path/to/new/virtual/environment
+source /path/to/new/virtual/environment/bin/activate
+```
 
 Proceed to install the following
-```apt-get install samtools bcftools tabix uv  (OSX: brew install samtools uv)```
-```uv venv .```
-```pip install crypt4gh ```
+```
+apt-get install samtools bcftools tabix uv  (OSX: brew install samtools uv)
+uv venv .
+pip install crypt4gh
+```
 
 Clone the Repo
-```git clone https://github.com/ga4gh/htsget-compliance.git```
-```cd htsget-compliance```
-```python setup.py install```
+```
+git clone https://github.com/ga4gh/htsget-compliance.git
+cd htsget-compliance
+python setup.py install
+```
 
 ## Service Info Phase
 - Create a new phase to test Service Info endpoints
