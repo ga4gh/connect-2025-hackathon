@@ -16,7 +16,6 @@ pip install crypt4gh
 Clone the Repo
 ```
 git clone https://github.com/ga4gh/connect-2025-hackathon
-cd htsget-compliance
 python setup.py install
 ```
 
